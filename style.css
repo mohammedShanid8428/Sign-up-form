@@ -32,7 +32,7 @@ body{
   background-position: left;
 }
 
-#loginpage .login-form{
+#login-page .login-form{
   width: 60%;
   height: 100%;
   flex: 1;
@@ -90,8 +90,56 @@ body{
 }
 
 .form-row .input-box label{
-  fon
+  font-size: calc(8px +0.4vw);
   position: absolute;
   top: 20px;
   left: 16px;
+  /* color: aliceblue; */
+  transition: 0.4s ease;
 }
+
+/* input:is(:focus,:valid)~la */
+
+.error{
+  display: none;
+  color: #B93D40;
+  font-size: 1rem;
+  position: relative;
+  top: 4px;
+
+
+}
+
+/* input:not(:placeholder-shown):invalid~.error{
+  display: block;
+} */
+
+form button[type="submit"]{
+  width: min(270px,30vw);
+  height: 5.5rem;
+  font-size: calc(12px +2vw);
+  background-color: var(--bg-color);
+  border: 3px solid (--text-color);
+  border-radius: 13px;
+  padding-top: 8px;
+  margin-top:6% ;
+  cursor: pointer;
+  transition: 0.4s ease-out;
+
+}
+
+form button[type="submit"]:hover{
+  background-color: var(--text-color);
+  color: var(--bg-color);
+  border-color: #B93D40;
+  transform: scale(1.04s);
+}
+
+.login-form .below{
+  font-size: (12px + 0.4vw);
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 2vh;
+}
+
