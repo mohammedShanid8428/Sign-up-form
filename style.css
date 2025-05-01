@@ -24,9 +24,10 @@ body{
   background-position: left;
 }
 
-.login-form{
+#loginpage .login-form{
   width: 60%;
   height: 100%;
+  flex: 1;
   display: flex;
 }
 
