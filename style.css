@@ -30,6 +30,6 @@ body{
   display: flex;
 }
 
-.login-page{
+#login-page{
   display: flex;
 }
