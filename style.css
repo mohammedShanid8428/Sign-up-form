@@ -2,6 +2,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
 
 }
 
@@ -14,12 +16,18 @@ body{
   background-color: var(--bg-color);
 }
 
-#login-page .picture{
+#login-page{
   height: 100vh;
   width: 100vw;
+  display: flex;
+}
+
+#login-page .picture{
+  height: 100%;
+  width: 40%;
   position: relative;
   background-image: url(./images/cake.jpg);
-  background-repeat: no-repeat;
+  /* background-repeat: no-repeat; */
   background-size: cover;
   background-position: left;
 }
@@ -29,8 +37,61 @@ body{
   height: 100%;
   flex: 1;
   display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 15px;
 }
 
-#login-page{
+#login-page .login-form .heading h1{
+  font-size: calc(24px + 1.6vw);
+}
+#login-page .login-form .heading h1{
+  font-size: calc(16px + 0.8vw);
+}
+
+#login-page .login-form form{
+  width: 100%;
   display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2vh;
+  padding: 20px 0;
+}
+
+#login-page .login-form form .form-row{
+  width: 100%;
+  display: flex;
+  gap: 30px;
+}
+
+.form-row .input-box{
+  width: 50%;
+  padding: 10px;
+  position: relative;
+}
+
+.form-row .input-box input {
+  display: block;
+  width: 100%;
+  padding:16px 6px 16px 10px ;
+  background: transparent;
+  border-radius: 5px;
+  border: 0;
+  border-bottom: 1px solid var(--text-color);
+  transition: 0.4s ease;
+  
+}
+
+.form-row .input-box input:focus{
+  border: 1px solid #173b559d;
+  box-shadow: 0px 2px 4px 0px #173b559d;
+  outline: none;
+}
+
+.form-row .input-box label{
+  fon
+  position: absolute;
+  top: 20px;
+  left: 16px;
 }
