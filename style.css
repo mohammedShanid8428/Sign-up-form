@@ -24,16 +24,16 @@ body{
 
 #login-page .picture{
   height: 100%;
-  width: 40%;
+  width: 50%;
   position: relative;
-  background-image: url(./images/cake.jpg);
+  background-image: url(./images/cake.png);
   /* background-repeat: no-repeat; */
   background-size: cover;
-  background-position: left;
+  background-position: center;
 }
 
 #login-page .login-form{
-  width: 60%;
+  width: 50%;
   height: 100%;
   flex: 1;
   display: flex;
@@ -41,14 +41,24 @@ body{
   justify-content: space-around;
   align-items: flex-start;
   padding: 15px;
+  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  border-radius: 10px;
+  padding: 40px;
 }
 
 #login-page .login-form .heading h1{
-  font-size: calc(24px + 1.6vw);
+  font-size: calc(2.5rem + 1.6vw);
+  font-weight: bold;
+  color:#3b1d0b ;
 }
 #login-page .login-form .heading h1{
-  font-size: calc(16px + 0.8vw);
+  font-size: calc(1.1rem + 0.8vw);
+  margin-top: 0.3rem;
+  color: #4a2d1f;
 }
+
+
 
 #login-page .login-form form{
   width: 100%;
@@ -98,7 +108,13 @@ body{
   transition: 0.4s ease;
 }
 
-/* input:is(:focus,:valid)~la */
+input:is(:focus, :valid) ~ label {
+  transform: 
+      translateY(-23px)
+      scale(0.85);
+  padding-inline: 0.3rem;
+  background-color: var(--bg-color);
+}
 
 .error{
   display: none;
@@ -110,16 +126,17 @@ body{
 
 }
 
-/* input:not(:placeholder-shown):invalid~.error{
+input:not(:placeholder-shown):invalid~.error{
   display: block;
-} */
+}
 
 form button[type="submit"]{
   width: min(270px,30vw);
   height: 5.5rem;
   font-size: calc(12px +2vw);
   background-color: var(--bg-color);
-  border: 3px solid (--text-color);
+  border: 3px solid  #B93D40;
+  font-weight: bold;
   border-radius: 13px;
   padding-top: 8px;
   margin-top:6% ;
@@ -132,7 +149,7 @@ form button[type="submit"]:hover{
   background-color: var(--text-color);
   color: var(--bg-color);
   border-color: #B93D40;
-  transform: scale(1.04s);
+  transform: scale(1.04);
 }
 
 .login-form .below{
