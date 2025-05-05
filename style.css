@@ -15,7 +15,19 @@
 body{
   background-color: var(--bg-color);
 }
+.title{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  font-weight: bold;
+  margin-top: 30px;
+}
 
+.title2{
+  display: flex;
+  justify-content: center;
+}
 #login-page{
   height: 100vh;
   width: 100vw;
@@ -47,15 +59,14 @@ body{
   padding: 40px;
 }
 
-#login-page .login-form .heading h1{
-  font-size: calc(2.5rem + 1.6vw);
-  font-weight: bold;
-  color:#3b1d0b ;
-}
+
 #login-page .login-form .heading h1{
   font-size: calc(1.1rem + 0.8vw);
-  margin-top: 0.3rem;
-  color: #4a2d1f;
+  font-size: 1.8rem;
+  margin-top: 0.2rem;
+  margin-bottom: 6PX;
+  color: #3b1d0b;
+  font-weight: bold;
 }
 
 
@@ -88,15 +99,18 @@ body{
   background: transparent;
   border-radius: 5px;
   border: 0;
-  border-bottom: 1px solid var(--text-color);
+  font-weight: 500;
+  font-size: 0.9rem;
+  border-bottom: 2px solid var(--text-color);
   transition: 0.4s ease;
   
 }
 
 .form-row .input-box input:focus{
   border: 1px solid #173b559d;
-  box-shadow: 0px 2px 4px 0px #173b559d;
+  box-shadow: 0px 2px 4px 2px #173b559d;
   outline: none;
+  background-color: #FFF;
 }
 
 .form-row .input-box label{
@@ -104,8 +118,9 @@ body{
   position: absolute;
   top: 20px;
   left: 16px;
-  /* color: aliceblue; */
+  font-weight: 900;
   transition: 0.4s ease;
+  
 }
 
 input:is(:focus, :valid) ~ label {
@@ -113,7 +128,7 @@ input:is(:focus, :valid) ~ label {
       translateY(-23px)
       scale(0.85);
   padding-inline: 0.3rem;
-  background-color: var(--bg-color);
+  background-color: #eccfad;
 }
 
 .error{
@@ -132,14 +147,15 @@ input:not(:placeholder-shown):invalid~.error{
 
 form button[type="submit"]{
   width: min(270px,30vw);
-  height: 5.5rem;
-  font-size: calc(12px +2vw);
+  height: 5.2rem;
+  /* font-size: calc(12px +2vw); */
+  font-size: 1.3rem;
   background-color: var(--bg-color);
   border: 3px solid  #B93D40;
   font-weight: bold;
   border-radius: 13px;
   padding-top: 8px;
-  margin-top:6% ;
+  margin-top:5% ;
   cursor: pointer;
   transition: 0.4s ease-out;
 
@@ -153,7 +169,8 @@ form button[type="submit"]:hover{
 }
 
 .login-form .below{
-  font-size: (12px + 0.4vw);
+  /* font-size: (12px + 0.4vw); */
+  font-size: 1.1rem;
   display: flex;
   flex-direction: column;
   width: 100%;
